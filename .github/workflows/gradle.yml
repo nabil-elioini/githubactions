@@ -26,8 +26,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build and push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v3
+      
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: nelioini/demo-app
         tag: latest
